@@ -1,1 +1,30 @@
-<h1 class="font-bold text-center text-indigo-600 text-9xl">prova</h1>
+<mat-sidenav-container class="h-screen">
+  <mat-sidenav #sidenav (keydown.escape)="sidenav.close()" class="mt-16">
+    <aside class="w-96 bg-slate-800 text-slate-200 text-lg py-4 px-6 h-full">
+      Sidenav
+    </aside>
+  </mat-sidenav>
+  <mat-sidenav-content class="dark:bg-slate-900">
+    <header class="py-3 px-5 bg-slate-950 flex justify-between">
+      <div class="flex gap-2 items-center">
+        <img src="../assets/logo-cloud-bg-dark.png" alt="Logo Giulio Marinelli Web Developer" class="w-16 h-auto">
+          <p class="bg-gradient-to-br from-sky-400 via-indigo-400 to-purple-600 font-dancing-script text-[42px] font-black
+          italic tracking-wide h-12 w-[72px] text-transparent bg-clip-text flex items-center pl-2 -mt-3">
+            gm
+          </p>
+
+      </div>
+      <button (click)="sidenav.toggle()" class="cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-10 h-10 text-slate-200">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </header>
+
+
+
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

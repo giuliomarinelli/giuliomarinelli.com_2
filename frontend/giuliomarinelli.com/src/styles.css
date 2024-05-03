@@ -1,0 +1,15 @@
+:root {
+  --mat-toolbar-container-background-color: transparent;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  .font-dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+  }
+}
