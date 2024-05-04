@@ -1,30 +1,45 @@
-<mat-sidenav-container class="h-screen">
-  <mat-sidenav #sidenav (keydown.escape)="sidenav.close()" class="mt-16">
-    <aside class="w-96 bg-slate-800 text-slate-200 text-lg py-4 px-6 h-full">
-      Sidenav
+<header class="py-2 px-5 sticky top-0 z-10 dark:bg-slate-950/35 backdrop-blur-[3px]">
+  <div class="md:container md:mx-auto flex justify-between md:px-4 lg:px-5 xl-px-6 2xl:px-8">
+    <div class="flex gap-1 items-center">
+      <img src="../assets/logo-cloud-bg-dark.png" alt="Logo Giulio Marinelli Web Developer" class="w-14 h-auto">
+      <p class="bg-gradient-to-br from-sky-400 via-indigo-400 to-purple-600 font-dancing-script text-[46px] font-black
+      italic tracking-wide h-14 w-[72px] text-transparent bg-clip-text flex items-center pl-2 -mt-3 text-clip">
+        gm
+      </p>
+    </div>
+
+    <button (click)="sidenav.toggle()" class="cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-10 h-10 text-slate-200">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+</header>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav (keydown.escape)="sidenav.close()">
+    <aside class="w-96 dark:bg-gray-900 text-slate-200 text-lg py-4 px-6 h-full">
+      <ul>
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/portfolio" routerLinkActive="active">Il mio
+            portfolio</a></li>
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/chi-sono" routerLinkActive="active">Chi
+            sono</a></li>
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/formazione-e-competenze"
+            routerLinkActive="active">Formazione e competenze</a></li>
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/blog" routerLinkActive="active">Blog</a></li>
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/contatti" routerLinkActive="active">Contatti</a>
+        </li>
+      </ul>
+      <div class="border border-b-indigo-500 w-6/12 mb-6"></div>
+      <div class="w-10/12 pr-6">
+        <img src="../assets/computer-2982270_1280.jpg" alt="Laptop" class="w-full h-auto">
+      </div>
     </aside>
   </mat-sidenav>
-  <mat-sidenav-content class="dark:bg-slate-900">
-    <header class="py-3 px-5 bg-slate-950 flex justify-between">
-      <div class="flex gap-2 items-center">
-        <img src="../assets/logo-cloud-bg-dark.png" alt="Logo Giulio Marinelli Web Developer" class="w-16 h-auto">
-          <p class="bg-gradient-to-br from-sky-400 via-indigo-400 to-purple-600 font-dancing-script text-[42px] font-black
-          italic tracking-wide h-12 w-[72px] text-transparent bg-clip-text flex items-center pl-2 -mt-3">
-            gm
-          </p>
-
-      </div>
-      <button (click)="sidenav.toggle()" class="cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-10 h-10 text-slate-200">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      </button>
-    </header>
-
-
-
-
+  <mat-sidenav-content class="dark:bg-slate-900 min-h-[200vh]">
+    <h1 class="text-indigo-600">Prova</h1>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
