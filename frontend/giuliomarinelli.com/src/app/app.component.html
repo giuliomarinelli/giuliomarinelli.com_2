@@ -2,7 +2,8 @@
   <div class="md:container md:mx-auto flex justify-between md:px-4 lg:px-5 xl-px-6 2xl:px-8">
     <div class="flex gap-1 items-center">
       <img src="../assets/logo-cloud-bg-dark.png" alt="Logo Giulio Marinelli Web Developer" class="w-14 h-auto">
-      <p class="bg-gradient-to-br from-sky-400 via-indigo-400 to-purple-600 font-dancing-script text-[46px] font-black
+      <p class="bg-gradient-to-br from-sky-400 via-indigo-400 to-purple-600 font-dancing-script text-[46px]
+      font-black
       italic tracking-wide h-14 w-[72px] text-transparent bg-clip-text flex items-center pl-2 -mt-3 text-clip">
         gm
       </p>
@@ -21,15 +22,15 @@
     <aside class="w-96 dark:bg-gray-900 text-slate-200 text-lg py-4 px-6 h-full">
       <ul>
         <li class="sidenav-item"><a class="sidenav-link" routerLink="/" routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/portfolio" routerLinkActive="active">Il mio
+            [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.close()">Home</a></li>
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/portfolio" routerLinkActive="active" (click)="sidenav.close()">Il mio
             portfolio</a></li>
-        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/chi-sono" routerLinkActive="active">Chi
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/chi-sono" routerLinkActive="active" (click)="sidenav.close()">Chi
             sono</a></li>
         <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/formazione-e-competenze"
-            routerLinkActive="active">Formazione e competenze</a></li>
-        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/blog" routerLinkActive="active">Blog</a></li>
-        <li class="sidenav-item"><a class="sidenav-link" routerLink="/contatti" routerLinkActive="active">Contatti</a>
+            routerLinkActive="active" (click)="sidenav.close()">Formazione e competenze</a></li>
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/it/blog" routerLinkActive="active" (click)="sidenav.close()">Blog</a></li>
+        <li class="sidenav-item"><a class="sidenav-link" routerLink="/contatti" routerLinkActive="active" (click)="sidenav.close()">Contatti</a>
         </li>
       </ul>
       <div class="border border-b-indigo-500 w-6/12 mb-6"></div>
