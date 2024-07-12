@@ -5,7 +5,7 @@ import { ConfigService } from '@nestjs/config';
 import { Logger } from '@nestjs/common';
 import fastifyCookie from '@fastify/cookie';
 
-async function bootstrap() {
+(async () => {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
     new FastifyAdapter()
@@ -24,5 +24,4 @@ async function bootstrap() {
   })
   await app.listen(port);
   logger.log('Fastify Web Server listening on port ' + port)
-}
-bootstrap();
+})()
